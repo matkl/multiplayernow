@@ -2,11 +2,8 @@
  * Provide req.game.
  */
 exports.load = (req, res, next) => {
-  console.log('L1');
   req.db.collection('games').findOne({ _id: req.params.id })
   .then((doc) => {
-    console.log('L2');
-    console.log(req.game, req.path);
     req.game = doc;
     next();
   })
