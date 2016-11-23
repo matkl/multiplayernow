@@ -1,0 +1,22 @@
+.hero {
+  background: #2e2e2e;
+  color: #ccc;
+}
+.hero__content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.hero__image-wrapper {
+  background: #1f1f1f;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.hero__image {
+  display: block;
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

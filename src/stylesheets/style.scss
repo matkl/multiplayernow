@@ -1,0 +1,37 @@
+$tabletWidth: 720px;
+$desktopWidth: 1024px;
+$backgroundColor: #e8e8e8;
+$primaryColor: #212121;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@import 'base';
+@import 'article';
+@import 'button';
+@import 'header';
+@import 'comment';
+@import 'game-item';
+@import 'grid';
+@import 'hero';
+@import 'site-footer';
+@import 'site-header';
+@import 'site-main';
+@import 'subheader';
+@import 'content';

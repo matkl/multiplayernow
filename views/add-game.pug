@@ -1,0 +1,34 @@
+extends layout
+
+append head
+  script(async, custom-template='amp-mustache', src='https://cdn.ampproject.org/v0/amp-mustache-0.1.js')
+  script(async, custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+
+block main
+  .content
+    .article
+      .article__content
+        h1 Add a Game
+        if success
+          div#suggest-thanks ✔ Thank you!
+        p If you know about a cool HTML5 multiplayer game or if you've developed one, let us know by submitting this form.
+        h2 Requirements
+        ol
+          li The game has a multiplayer mode.
+          li The game is playable in the web browser with pure HTML5 (No Flash, no plugins).
+          li The game is free to play.
+          li The game is finished. No alpha versions please.
+        p Thank you. :-)
+        form#suggest.card.card-content(action-xhr='/add-game', method='post', on='submit-success:suggest-content.hide', target='_top')
+          #suggest-content
+            label(for='suggest-url') Game URL
+            input#suggest-url(type='text', name='url', required, autocomplete='off')
+            label(for='suggest-task') Calculate: 2 times 4
+            input#suggest-task(type='text', name='task', required, autocomplete='off')
+            button.button(type='submit') Send
+          div(submit-success)
+            template(type='amp-mustache')
+              p.u-success Thanks for your submission. We will add your game if it matches the requirements.
+          div(submit-error)
+            template(type='amp-mustache')
+              p.u-error Error. Something went wrong.

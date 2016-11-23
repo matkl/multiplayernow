@@ -1,0 +1,39 @@
+.button {
+  background: #40c4ff;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 36px;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-overflow: ellipsis;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.button:hover {
+  background: #53caff;
+  text-decoration: none;
+}
+.button:active {
+  background: #00b0ff;
+}
+.button_transparent {
+  background: none;
+  color: #757575;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 3rem;
+  transition: color 0.2s;
+}
+.button_transparent:hover {
+  background: none;
+  color: #00b0ff;
+}
+.button_transparent:active {
+  background: none;
+}
+.button_transparent i {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,29 @@
+extends layout
+include mixins/header
+
+block main
+  +header(title, subtitle)
+  ul.grid
+    each game in games
+      li.grid__cell
+        - var href = `/games/${game._id}`;
+        article.game-item
+          a(href=href)
+            .game-item__image-wrapper
+              amp-img.game-item__image(src=`/images/games/${game._id}.jpg`, alt=game.name, width=1280, height=720, layout='responsive')
+              .game-item__name-wrapper
+                .game-item__name= game.name
+          .game-item__description= game.description
+          .game-item__footer
+            a.game-item__comments(href=href)
+              i.fa.fa-comments
+              = ' '
+              = game.comments ? game.comments.length : 0
+            a.game-item__play(href=game.url)= `Play ${game.name}`
+  .u-center
+    .u-container
+      p Not found what you were looking for? Check out <a href="https://www.reddit.com/r/WebGames/">/r/WebGames</a> for more games.
+      div
+        a(href='/add-game').button.button_transparent
+          i.fa.fa-plus
+          |  Add Game

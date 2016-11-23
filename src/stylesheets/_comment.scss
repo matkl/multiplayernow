@@ -1,0 +1,19 @@
+.comment__author {
+  padding-right: 0.5em;
+}
+.comment__header {
+  color: #757575;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.comment__link {
+  color: #00b0ff;
+}
+.comment__link:hover {
+  text-decoration: underline;
+}
+.comment__time {
+  font-weight: 400;
+}

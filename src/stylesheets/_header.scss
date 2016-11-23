@@ -1,0 +1,23 @@
+.header {
+  margin: 3rem 0;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+.header__title {
+  margin: 0;
+}
+.header__subtitle {
+  color: #757575;
+}
+
+@media (min-width: $tabletWidth) {
+  .header {
+    margin: 72px 0;
+  }
+  .header__title {
+    font-size: 3rem;
+  }
+  .header__subtitle {
+    font-size: 1.25rem;
+  }
+}

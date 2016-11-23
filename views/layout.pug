@@ -1,0 +1,46 @@
+doctype html
+html(amp, lang='en')
+  head
+    meta(charset='utf-8')
+    script(async, custom-element='amp-analytics', src='https://cdn.ampproject.org/v0/amp-analytics-0.1.js')
+    script(async, src='https://cdn.ampproject.org/v0.js')
+    link(rel='canonical', href=canonical)
+    meta(name='viewport', content='width=device-width,minimum-scale=1,initial-scale=1')
+    if description
+      meta(name='description', content=description)
+    title= title ? `${title} - Multiplayer Now` : 'Multiplayer Now'
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,600,700|Open Sans:400,600,700', rel='stylesheet')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', rel='stylesheet')
+    block head
+    include includes/amp-boilerplate.html
+    style(amp-custom)
+      include ../build/style.css
+  body
+    if env !== 'development'
+      amp-analytics(type='googleanalytics')
+        script(type='application/json').
+          {
+            "vars": {
+              "account": "#{config.googleAnalyticsId}"
+            },
+            "triggers": {
+              "trackPageview": {
+                "on": "visible",
+                "request": "pageview"
+              }
+            }
+          }
+    header.site-header
+      nav.site-header__nav
+        .site-header__home
+          a.site-header__home-link(href='/') Multiplayer Now
+        ul.site-header__list
+          each tag, key in config.tags
+            li.site-header__item
+              a.site-header__link(href=`/tags/${key}`)= tag.name
+        .site-header__add-game
+          a.site-header__link(href='/add-game') Add Game
+    main.site-main
+      block main
+    footer.site-footer
+      | Multiplayer Now — A List of HTML5 Multiplayer Games on the Web. © 2015–2016 <a href="http://matthiasklein.me">Matthias Klein</a>

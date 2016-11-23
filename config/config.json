@@ -1,0 +1,40 @@
+{
+  "home": {
+    "title": "HTML5 Multiplayer Games",
+    "subtitle": "Free to play multiplayer games that are playable in the browser",
+    "description": "Curated collection of HTML5 multiplayer games."
+  },
+  "tags": {
+    "action": {
+      "name": "Action",
+      "title": "Action Games",
+      "subtitle": "Multiplayer HTML5 Action Games"
+    },
+    "board-card": {
+      "name": "Board & Card",
+      "title": "Board & Card Games",
+      "subtitle": "Multiplayer HTML5 Board and Card Games"
+    },
+    "rpg": {
+      "name": "RPG",
+      "title": "Role-playing Games",
+      "subtitle": "Multiplayer HTML5 Role-playing Games"
+    },
+    "sports": {
+      "name": "Sports",
+      "title": "Sports Games",
+      "subtitle": "Multiplayer HTML5 Sports Games"
+    },
+    "strategy": {
+      "name": "Strategy",
+      "title": "Strategy Games",
+      "subtitle": "Multiplayer HTML5 Strategy Games"
+    }
+  },
+  "db": "mongodb://localhost:27017/multiplayernow",
+  "files": "/files/multiplayernow",
+  "origin": "https://multiplayernow.com",
+  "from": "Multiplayer Now <info@multiplayernow.com>",
+  "admin": "Matthias Klein <matthias@klein.pw>",
+  "googleAnalyticsId": "UA-58194039-1"
+}

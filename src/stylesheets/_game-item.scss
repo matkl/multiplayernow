@@ -1,0 +1,106 @@
+.game-item {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+  background: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.game-item__name-wrapper {
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  bottom: 0;
+  height: 90px;
+  position: absolute;
+  width: 100%;
+}
+.game-item__name {
+  color: #fff;
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  line-height: 1;
+  padding: 1rem;
+  position: absolute;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 1px #000;
+  white-space: nowrap;
+  width: 100%;
+}
+.game-item__image-wrapper {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.game-item__image-wrapper:hover img {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+}
+.game-item__image-wrapper:active img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.game-item__image {
+  display: block;
+  height: auto;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  top: 0;
+  transition: opacity 0.2s;
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+}
+.game-item__description {
+  padding: 1rem;
+}
+.game-item__footer {
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.game-item__comments {
+  background: #fff;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #757575;
+  display: block;
+  box-flex: 1;
+  flex: 0 0 auto;
+  line-height: 2.25rem;
+  margin-right: 0.5rem;
+  padding: 0 1rem;
+  transition: background 0.2s;
+}
+.game-item__comments:hover {
+  background: #f2f2f2;
+  text-decoration: none;
+  color: #757575;
+}
+.game-item__comments:active {
+  background: #e6e6e6;
+}
+.game-item__play {
+  background: #40c4ff;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  color: #fff;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-overflow: ellipsis;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.game-item__play:hover {
+  background: #53caff;
+  text-decoration: none;
+}
+.game-item__play:active {
+  background: #00b0ff;
+}

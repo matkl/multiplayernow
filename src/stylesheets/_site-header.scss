@@ -1,0 +1,87 @@
+.site-header {
+  background: #1f1f1f;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  color: #757575;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 1;
+}
+.site-header__list {
+  box-sizing: border-box;
+  display: flex;
+  box-flex: 1;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-header__item {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.site-header__item:last-child {
+  margin-right: 0;
+}
+.site-header__link {
+  color: rgba(255,255,255,0.5);
+  display: block;
+  padding: 1rem 0.5rem;
+  transition: background 0.2s;
+}
+.site-header__link:hover {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+.site-header__home {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.site-header__home-link {
+  color: #fff;
+}
+.site-header__home-link:hover {
+  text-decoration: none;
+}
+.site-header__add-game {
+  display: none;
+}
+.site-header__nav {
+  background: #1f1f1f;
+  text-align: center;
+}
+
+@media (min-width: $tabletWidth) {
+  .site-header__nav {
+    display: flex;
+    align-items: baseline;
+    padding: 0 1rem;
+  }
+  .site-header__home {
+    margin-bottom: 0;
+    padding: 0 1rem;
+  }
+  .site-header__link {
+    padding: 1rem;
+  }
+  .site-header__list {
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .site-header__add-game {
+    display: block;
+  }
+}
