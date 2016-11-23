@@ -8,7 +8,7 @@
     "build": "npm run build:css",
     "build:css": "node-sass src/stylesheets/style.scss -o build/ && postcss -u autoprefixer -u cssnano -r build/*.css",
     "watch:css": "nodemon -e scss -x 'npm run build:css'",
-    "test": "cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha",
+    "test": "npm run build && cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha",
     "watch:test": "cross-env NODE_ENV=test nodemon -x \"node_modules/mocha/bin/_mocha || true\""
   },
   "main": "server.js",
