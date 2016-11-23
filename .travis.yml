@@ -3,5 +3,7 @@ node_js:
   - "6"
 services:
   - mongodb
+before_script:
+  - npm run build
 after_success:
   - coveralls
