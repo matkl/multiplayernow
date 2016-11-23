@@ -11,7 +11,7 @@ This is a small example app, nothing fancy. Complete production app with minimal
 Built with:
 
 - Express
-- MongoDB
+- MongoDB (requires MongoDB 3.2)
 - [AMP](https://ampproject.org/)
 - Node.js
 
