@@ -1,7 +1,6 @@
 multiplayernow
 ==============
 
-[![Build Status](https://travis-ci.org/matkl/multiplayernow.svg?branch=master)](https://travis-ci.org/matkl/multiplayernow)
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
