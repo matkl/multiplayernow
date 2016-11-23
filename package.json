@@ -9,7 +9,8 @@
     "build:css": "node-sass src/stylesheets/style.scss -o build/ && postcss -u autoprefixer -u cssnano -r build/*.css",
     "watch:css": "nodemon -e scss -x 'npm run build:css'",
     "test": "cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha",
-    "watch:test": "cross-env NODE_ENV=test nodemon -x \"node_modules/mocha/bin/_mocha || true\""
+    "watch:test": "cross-env NODE_ENV=test nodemon -x \"node_modules/mocha/bin/_mocha || true\"",
+    "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "main": "server.js",
   "eslintConfig": {

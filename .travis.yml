@@ -11,5 +11,4 @@ addons:
       - mongodb-org-shell
 before_script:
   - npm run build
-after_success:
-  - coveralls
+after_success: 'npm run coveralls'
