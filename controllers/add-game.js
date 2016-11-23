@@ -5,6 +5,9 @@ const config = require('../config');
 
 const transporter = nodemailer.createTransport(smtpTransport({ ignoreTLS: true }));
 
+/**
+ * GET /add-game
+ */
 exports.get = (req, res) => {
   res.render('add-game', {
     title: 'Add Game',
@@ -12,6 +15,9 @@ exports.get = (req, res) => {
   });
 };
 
+/**
+ * POST /add-game
+ */
 exports.post = (req, res, next) => {
   const error = err => next(new Error(err));
   const ok = data => res.send(data);

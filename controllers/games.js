@@ -1,3 +1,6 @@
+/**
+ * Provide req.game.
+ */
 exports.load = (req, res, next) => {
   req.db.collection('games').findOne({ _id: req.params.id })
   .then((doc) => {
@@ -7,6 +10,9 @@ exports.load = (req, res, next) => {
   .catch(next);
 };
 
+/**
+ * GET /games/:id
+ */
 exports.get = (req, res, next) => {
   if (!req.game) return next();
 
@@ -17,7 +23,12 @@ exports.get = (req, res, next) => {
   });
 };
 
+/**
+ * POST /games/:id/comments
+ */
 exports.postComment = (req, res, next) => {
+  if (!req.game) return next();
+
   const error = err => next(new Error(err));
 
   if (!req.body.task) return error('wrong answer');

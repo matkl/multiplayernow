@@ -1,3 +1,6 @@
+/**
+ * Provide req.games and req.tag.
+ */
 exports.load = (req, res, next) => {
   const tag = req.params.tag
     ? req.app.locals.config.tags[req.params.tag]
@@ -17,6 +20,10 @@ exports.load = (req, res, next) => {
   .catch(next);
 };
 
+/**
+ * GET /tags/:id
+ * GET /
+ */
 exports.get = (req, res, next) => {
   if (!req.games) return next();
 

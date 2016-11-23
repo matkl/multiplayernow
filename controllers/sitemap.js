@@ -1,5 +1,8 @@
 const config = require('../config');
 
+/**
+ * GET /sitemap.xml
+ */
 exports.getXML = (req, res, next) => {
   const base = config.origin;
 
